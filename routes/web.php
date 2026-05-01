@@ -28,7 +28,6 @@ Route::get('/guweh', function () {
 });
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
-
 Route::get('/produk', [ProdukController::class,'index']);
 Route::get('/showproduk', [ProdukController::class,'show']);
 Route::get('/viewproduk', [ProdukController::class,'view']);
