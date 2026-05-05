@@ -13,4 +13,16 @@ class MahasiswaController extends Controller
        $mahasiswa = Mahasiswa::all();
        return view ('mahasiswa.index', compact('mahasiswa'));
     }
+
+    public function create ()
+    {
+       return view ('mahasiswa.create');
+    }
+
+    public function store (Request $request)
+    {
+       Mahasiswa::create($request->all());
+       return redirect ('/mahasiswa');
+    }
+    
 }
