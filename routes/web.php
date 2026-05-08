@@ -28,9 +28,14 @@ Route::get('/guweh', function () {
 });
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+// add
 Route::get('/mahasiswa/create', [MahasiswaController::class, 'create']);
 Route::post('/mahasiswa/store', [MahasiswaController::class, 'store']);
-
+// edit
+Route::get('/mahasiswa/edit/{id}', [MahasiswaController::class, 'edit']);
+Route::post('/mahasiswa/update/{id}', [MahasiswaController::class, 'update']);
+// delete
+Route::post('/mahasiswa/delete/{id}', [MahasiswaController::class, 'destroy']);
 
 Route::get('/produk', [ProdukController::class,'index']);
 Route::get('/showproduk', [ProdukController::class,'show']);
