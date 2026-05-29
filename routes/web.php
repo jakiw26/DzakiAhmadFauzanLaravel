@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\AnggotaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\ProdukController;
-
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,4 +40,6 @@ Route::post('/mahasiswa/delete/{id}', [MahasiswaController::class, 'destroy']);
 Route::get('/produk', [ProdukController::class,'index']);
 Route::get('/showproduk', [ProdukController::class,'show']);
 Route::get('/viewproduk', [ProdukController::class,'view']);
+
+Route::resource('anggota', AnggotaController::class);
 
